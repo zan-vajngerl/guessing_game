@@ -1,0 +1,17 @@
+{
+    "first":
+    {
+        "name1": "a",
+        "guesses": 997
+    },
+    "second":
+    {
+        "name2": "b",
+        "guesses": 998
+    },
+    "third":
+    {
+        "name3": "c",
+        "guesses": 999
+        }
+}
