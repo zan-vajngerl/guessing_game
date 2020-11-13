@@ -1,7 +1,8 @@
 import random
 
 
-
+#guessing game on easy difficulty
+#works
 def easy():
     SECRET = random.randint(1, 100)
     try_number = 1
@@ -10,7 +11,7 @@ def easy():
     print("You chose easy difficulty. Try and guess a number between 1 and 100")
     print("You have 20 tries")
     print("Good Luck!")
-    print(SECRET) #testing purposes, immediately see number
+    print(SECRET) # for testing purposes, immediately see number
 
 
     for x in range(20):
@@ -30,7 +31,8 @@ def easy():
     print(f"The number we were looking for was {SECRET}")
 
 
-
+#guessing game on medium difficulty
+#works
 def medium():
     SECRET = random.randint(1, 200)
     try_number = 1
@@ -56,10 +58,13 @@ def medium():
             print("Hot!")
         elif 20 > abs(guess - SECRET):
             print("Warm")
-        else: print("Cold")
+        else:
+            print("Cold")
 
     print(f"The number we were looking for was {SECRET}")
 
+#guessing game on hard difficulty
+#works
 def hard():
     SECRET = random.randint(1, 50)
     try_number = 1

@@ -14,7 +14,6 @@ while True:
         get_scores(difficulty)
         easy()
         highscore_change(easy().easy_score)
-        #print(highscore_change().first_place)
         break
     elif difficulty == "medium":
         get_scores(difficulty)
@@ -28,5 +27,3 @@ while True:
         break
     else:
         print("Not a valid difficulty, please enter one of the given options")
-
-input("Press enter to play again")

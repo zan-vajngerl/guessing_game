@@ -1,7 +1,8 @@
 import json
 
 
-
+# get_scores pulls the highscore information from the appropriate txt file depending on the difficulty
+# as far as I know, this works
 def get_scores(diff):
     global first
     global second
@@ -40,14 +41,15 @@ def get_scores(diff):
             second = second_place
             third = third_place
 
+# the purpose of highscore_change was to check whether the score from the user was in the top 3, then update the values
+# if this is run, the guessing game loops on the same difficulty. If commented out the game function exits normally
+# currently does not work, not sure why. My guess is I'm referencing the original scores incorrectly
 def highscore_change(my_score):
     from main import difficulty
     first_place = get_scores(difficulty).first
     second_place = get_scores(difficulty).second
     third_place = get_scores(difficulty).third
-    print(first_place)
-    print(second_place)
-    print(third_place)
+    
     if my_score < third_place:
         if my_score < first_place:
             third_place = second_place
@@ -58,3 +60,5 @@ def highscore_change(my_score):
             second_place = my_score
         else:
             third_place = my_score
+
+#still missing: updating the highscore files with the new results
